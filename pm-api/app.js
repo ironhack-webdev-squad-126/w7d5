@@ -78,4 +78,7 @@ app.use("/", index);
 const projects = require("./routes/projects");
 app.use("/api", projects);
 
+const tasks = require("./routes/tasks");
+app.use("/api", tasks);
+
 module.exports = app;

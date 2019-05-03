@@ -42,6 +42,7 @@ router.get("/projects/:id", (req, res) => {
 router.put("/projects/:id", (req, res) => {
   Project.findByIdAndUpdate(req.params.id, req.body)
     .then(() => {
+      // .status() optional
       res.status(200).json({ message: "ok" });
     })
     .catch(error => {
@@ -52,6 +53,7 @@ router.put("/projects/:id", (req, res) => {
 router.delete("/projects/:id", (req, res) => {
   Project.findByIdAndDelete(req.params.id)
     .then(() => {
+      // .status() optional
       res.status(200).json({ message: "ok" });
     })
     .catch(error => {
