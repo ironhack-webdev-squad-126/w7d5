@@ -2,7 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import ProjectDetails from "./components/Projects/Details";
 import ProjectsList from "./components/Projects/List";
+
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (

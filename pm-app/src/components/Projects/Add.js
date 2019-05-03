@@ -34,25 +34,31 @@ class AddProject extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className="form-group">
             <label>title:</label>
             <input
-              name="title"
-              type="text"
+              className="form-control"
               value={this.state.title}
               onChange={this.handleChange}
+              name="title"
+              type="text"
             />
           </div>
-          <div>
+          <div className="form-group">
             <label>description:</label>
             <input
-              name="description"
-              type="text"
+              className="form-control"
               value={this.state.description}
               onChange={this.handleChange}
+              type="text"
+              name="description"
             />
           </div>
-          <input type="submit" value="Create a project" />
+          <input
+            className="btn btn-primary"
+            type="submit"
+            value="Create Project"
+          />
         </form>
       </div>
     );
