@@ -38,6 +38,17 @@ class ProjectDetails extends React.Component {
       <div>
         <h1>{project.title}</h1>
         <p>{project.description}</p>
+
+        {project.tasks && project.tasks.length > 0 && <h3>Tasks</h3>}
+        {project.tasks &&
+          project.tasks.map(task => {
+            return (
+              <div key={task._id}>
+                <Link to={`/tasks/${task._id}`}>{task.title}</Link>
+              </div>
+            );
+          })}
+
         <EditProject project={project} getDetails={this.getProject} />
         <button
           style={{ marginTop: "10px" }}
