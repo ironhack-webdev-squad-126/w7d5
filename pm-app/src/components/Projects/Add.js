@@ -28,6 +28,15 @@ class AddProject extends React.Component {
               onChange={this.handleChange}
             />
           </div>
+          <div>
+            <label>description:</label>
+            <input
+              name="description"
+              type="text"
+              value={this.state.description}
+              onChange={this.handleChange}
+            />
+          </div>
           <input type="submit" value="Create a project" />
         </form>
       </div>
