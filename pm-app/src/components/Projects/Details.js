@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EditProject from "./Edit";
+import AddTask from "../Tasks/Add";
 import axios from "axios";
 
 class ProjectDetails extends React.Component {
@@ -46,6 +47,10 @@ class ProjectDetails extends React.Component {
           Delete project
         </button>
         <br />
+
+        <AddTask project={project} getProject={this.getProject} />
+        <br />
+
         <Link to="/projects">Back</Link>
       </div>
     );
