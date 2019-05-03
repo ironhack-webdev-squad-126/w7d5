@@ -8,12 +8,16 @@ class ProjectsList extends React.Component {
     projects: []
   };
 
-  componentDidMount() {
+  getData = () => {
     axios.get("http://localhost:5000/api/projects").then(response => {
       this.setState({
         projects: response.data
       });
     });
+  };
+
+  componentDidMount() {
+    this.getData();
   }
 
   render() {
@@ -31,7 +35,7 @@ class ProjectsList extends React.Component {
           })}
         </div>
         <div style={{ width: "40%", float: "right" }}>
-          <AddProject />
+          <AddProject getData={this.getData} />
         </div>
       </div>
     );
